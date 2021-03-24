@@ -13,7 +13,7 @@ class UserManager extends BaseManager {
 
         var config = {
             method: 'get',
-            url: 'https://api.guilded.gg/users/'+ userId,
+            url: 'https://guilded.gg/api/users/'+ userId,
             headers: { 
             	'Content-Type': 'application/json', 
             	'Cookie': this.client.cookies
