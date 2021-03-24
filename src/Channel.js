@@ -26,7 +26,7 @@ class Channel {
 
         var config = {
             method: 'post',
-            url: 'https://api.guilded.gg/channels/'+ this.id +'/messages',
+            url: 'https://guilded.gg/api/channels/'+ this.id +'/messages',
             headers: { 
                 'Content-Type': 'application/json', 
                 'Cookie': this.client.cookies
@@ -70,7 +70,7 @@ class Channel {
 
         var config = {
             method: 'put',
-            url: 'https://api.guilded.gg/teams/'+ this.team.id +'/groups/'+ this.groupId +'/channels/'+ this.id +'/info',
+            url: 'https://guilded.gg/api/teams/'+ this.team.id +'/groups/'+ this.groupId +'/channels/'+ this.id +'/info',
             headers: {
                 'Content-Type': 'application/json', 
                 'Cookie': this.client.cookies
@@ -93,7 +93,7 @@ class Channel {
     async getMessages(limit) {
         var config = {
             method: 'get',
-            url: 'https://api.guilded.gg/channels/'+ this.id +'/messages?limit='+ limit,
+            url: 'https://guilded.gg/api/channels/'+ this.id +'/messages?limit='+ limit,
             headers: {
                 'Content-Type': 'application/json', 
                 'Cookie': this.client.cookies
@@ -201,7 +201,7 @@ class Channel {
     archive() {
         var config = {
             method: 'put',
-            url: 'https://api.guilded.gg/teams/'+ this.team.id +'/groups/'+ this.groupId +'/channels/'+ this.id +'/archive',
+            url: 'https://guilded.gg/api/teams/'+ this.team.id +'/groups/'+ this.groupId +'/channels/'+ this.id +'/archive',
             headers: {
                 'Content-Type': 'application/json', 
                 'Cookie': this.client.cookies
