@@ -23,7 +23,7 @@ class Message {
     react(reaction) {
         var config = {
             method: 'post',
-            url: 'https://api.guilded.gg/channels/'+ this.channel.id +'/messages/'+ this.id +'/reactions/'+reaction,
+            url: 'https://guilded.gg/api/channels/'+ this.channel.id +'/messages/'+ this.id +'/reactions/'+reaction,
             headers: { 
                 'Cookie': this.client.cookies
             }
@@ -213,7 +213,7 @@ class Message {
 
         var config = {
             method: 'post',
-            url: 'https://api.guilded.gg/channels/'+ this.channel.id +'/threads',
+            url: 'https://guilded.gg/api/channels/'+ this.channel.id +'/threads',
             headers: { 
                 'Content-Type': 'application/json', 
                 'Cookie': this.client.cookies
@@ -257,7 +257,7 @@ class Message {
 
         var config = {
             method: 'put',
-            url: 'https://api.guilded.gg/channels/'+ this.channel.id +'/messages/'+ this.id,
+            url: 'https://guilded.gg/api/channels/'+ this.channel.id +'/messages/'+ this.id,
             headers: { 
                 'Content-Type': 'application/json', 
                 'Cookie': this.client.cookies
