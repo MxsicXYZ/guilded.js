@@ -42,7 +42,7 @@ class GuildedClient {
                 self.cacheDMChannels();
                 self.cacheTeams();
 
-                self.ws = new WebSocket('wss://api.guilded.gg/socket.io/?jwt=undefined&EIO=3&transport=websocket', {headers:{cookie: self.cookies}});
+                self.ws = new WebSocket('wss:/guilded.gg/api/socket.io/?jwt=undefined&EIO=3&transport=websocket', {headers:{cookie: self.cookies}});
                 
                 self.ws.on('open', function open() {
                     //console.log("websocket connected");
@@ -85,7 +85,7 @@ class GuildedClient {
     cacheTeams() {
         var config = {
             method: 'get',
-            url: 'https://api.guilded.gg/me',
+            url: 'https://guilded.gg/api/me',
             headers: { 
             'Content-Type': 'application/json', 
             'Cookie': this.cookies
@@ -134,7 +134,7 @@ class GuildedClient {
     cacheDMChannels() {
         var config = {
             method: 'get',
-            url: 'https://api.guilded.gg/users/'+ this.id +'/channels',
+            url: 'https://guilded.gg/api/users/'+ this.id +'/channels',
             headers: { 
                 'Content-Type': 'application/json', 
                 'Cookie': this.cookies
@@ -376,7 +376,7 @@ class GuildedClient {
 
         var config = {
             method: 'post',
-            url: 'https://api.guilded.gg/users/me/presence',
+            url: 'https://guilded.gg/api/users/me/presence',
             headers: { 
             'Content-Type': 'application/json', 
             'Cookie': this.cookies
@@ -396,7 +396,7 @@ class GuildedClient {
     user(userId) {
         var config = {
             method: 'get',
-            url: 'https://api.guilded.gg/users/'+ userId +'/profilev3',
+            url: 'https://guilded.gg/api/users/'+ userId +'/profilev3',
             headers: { 
             'Content-Type': 'application/json', 
             'Cookie': this.cookies
@@ -416,7 +416,7 @@ class GuildedClient {
     Team(teamId) {
         var config = {
             method: 'get',
-            url: 'https://api.guilded.gg/teams/'+ teamId,
+            url: 'https://guilded.gg/api/teams/'+ teamId,
             headers: { 
             'Content-Type': 'application/json', 
             'Cookie': this.cookies
@@ -436,7 +436,7 @@ class GuildedClient {
     self() {
         var config = {
             method: 'get',
-            url: 'https://api.guilded.gg/me',
+            url: 'https://guilded.gg/api/me',
             headers: { 
             'Content-Type': 'application/json', 
             'Cookie': this.cookies
@@ -458,7 +458,7 @@ class GuildedClient {
 
         var config = {
             method: 'put',
-            url: 'https://api.guilded.gg/invites/'+ inviteId,
+            url: 'https://guilded.gg/api/invites/'+ inviteId,
             headers: { 
             'Content-Type': 'application/json', 
             'Cookie': this.cookies
@@ -482,7 +482,7 @@ class GuildedClient {
 
         var config = {
             method: 'get',
-            url: 'https://api.guilded.gg/invites/'+ inviteId +'/team',
+            url: 'https://guilded.gg/api/invites/'+ inviteId +'/team',
             headers: { 
             'Content-Type': 'application/json', 
             'Cookie': this.cookies
@@ -504,7 +504,7 @@ class GuildedClient {
 
         var config = {
             method: 'get',
-            url: 'https://api.guilded.gg/users/'+ userId +'/posts',
+            url: 'https://guilded.gg/api/users/'+ userId +'/posts',
             headers: { 
             'Content-Type': 'application/json', 
             'Cookie': this.cookies
