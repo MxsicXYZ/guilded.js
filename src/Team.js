@@ -29,7 +29,7 @@ class Team {
         });
 
         //manage websocket
-        this.ws = new WebSocket('wss://api.guilded.gg/socket.io/?teamId='+ this.id +'&EIO=3&transport=websocket', {headers:{cookie: this.client.cookies}});
+        this.ws = new WebSocket('wss://guilded.gg/api/socket.io/?teamId='+ this.id +'&EIO=3&transport=websocket', {headers:{cookie: this.client.cookies}});
 
         var self = this;
                 
@@ -101,7 +101,7 @@ class Team {
     async getChannels() {
         var config = {
             method: 'get',
-            url: 'https://api.guilded.gg/teams/'+ this.id +'/channels',
+            url: 'https://guilded.gg/api/teams/'+ this.id +'/channels',
             headers: {
                 'Content-Type': 'application/json', 
                 'Cookie': this.client.cookies
@@ -137,7 +137,7 @@ class Team {
 
         var config = {
             method: 'post',
-            url: 'https://api.guilded.gg/teams/'+ this.id +'/invites',
+            url: 'https://guilded.gg/api//teams/'+ this.id +'/invites',
             headers: {
                 'Content-Type': 'application/json', 
                 'Cookie': this.client.cookies
