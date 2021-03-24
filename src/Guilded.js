@@ -23,7 +23,7 @@ class GuildedClient {
 
         var config = {
             method: 'post',
-            url: 'https://api.guilded.gg/login',
+            url: 'https://guilded.gg/api/login',
             headers: { 
                 'Content-Type': 'application/json'
             },
