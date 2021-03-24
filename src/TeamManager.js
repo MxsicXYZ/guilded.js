@@ -13,7 +13,7 @@ class TeamManager extends BaseManager {
 
         var config = {
             method: 'get',
-            url: 'https://api.guilded.gg/teams/'+ teamId,
+            url: 'https://guilded.gg/api/teams/'+ teamId,
             headers: { 
             'Content-Type': 'application/json', 
             'Cookie': this.client.cookies
