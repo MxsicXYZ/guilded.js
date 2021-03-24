@@ -23,7 +23,7 @@ class GuildedClient {
 
         var config = {
             method: 'post',
-            url: 'https://www.guilded.gg/api/login',
+            url: 'https://guilded.gg/api/login',
             headers: { 
                 'Content-Type': 'application/json'
             },
@@ -85,7 +85,7 @@ class GuildedClient {
     cacheTeams() {
         var config = {
             method: 'get',
-            url: 'https://www.guilded.gg/api/me',
+            url: 'https://guilded.gg/api/me',
             headers: { 
             'Content-Type': 'application/json', 
             'Cookie': this.cookies
@@ -134,7 +134,7 @@ class GuildedClient {
     cacheDMChannels() {
         var config = {
             method: 'get',
-            url: 'https://www.guilded.gg/api/users/'+ this.id +'/channels',
+            url: 'https://guilded.gg/api/users/'+ this.id +'/channels',
             headers: { 
                 'Content-Type': 'application/json', 
                 'Cookie': this.cookies
@@ -376,7 +376,7 @@ class GuildedClient {
 
         var config = {
             method: 'post',
-            url: 'https://www.guilded.gg/api/users/me/presence',
+            url: 'https://guilded.gg/api/users/me/presence',
             headers: { 
             'Content-Type': 'application/json', 
             'Cookie': this.cookies
@@ -396,7 +396,7 @@ class GuildedClient {
     user(userId) {
         var config = {
             method: 'get',
-            url: 'https://www.guilded.gg/api/users/'+ userId +'/profilev3',
+            url: 'https://guilded.gg/api/users/'+ userId +'/profilev3',
             headers: { 
             'Content-Type': 'application/json', 
             'Cookie': this.cookies
@@ -416,7 +416,7 @@ class GuildedClient {
     Team(teamId) {
         var config = {
             method: 'get',
-            url: 'https://www.guilded.gg/api/teams/'+ teamId,
+            url: 'https://guilded.gg/api/teams/'+ teamId,
             headers: { 
             'Content-Type': 'application/json', 
             'Cookie': this.cookies
@@ -436,7 +436,7 @@ class GuildedClient {
     self() {
         var config = {
             method: 'get',
-            url: 'https://www.guilded.gg/api/me',
+            url: 'https://guilded.gg/api/me',
             headers: { 
             'Content-Type': 'application/json', 
             'Cookie': this.cookies
@@ -458,7 +458,7 @@ class GuildedClient {
 
         var config = {
             method: 'put',
-            url: 'https://www.guilded.gg/api/invites/'+ inviteId,
+            url: 'https://guilded.gg/api/invites/'+ inviteId,
             headers: { 
             'Content-Type': 'application/json', 
             'Cookie': this.cookies
@@ -482,7 +482,7 @@ class GuildedClient {
 
         var config = {
             method: 'get',
-            url: 'https://www.guilded.gg/api/invites/'+ inviteId +'/team',
+            url: 'https://guilded.gg/api/invites/'+ inviteId +'/team',
             headers: { 
             'Content-Type': 'application/json', 
             'Cookie': this.cookies
@@ -504,7 +504,7 @@ class GuildedClient {
 
         var config = {
             method: 'get',
-            url: 'https://www.guilded.gg/api/users/'+ userId +'/posts',
+            url: 'https://guilded.gg/api/users/'+ userId +'/posts',
             headers: { 
             'Content-Type': 'application/json', 
             'Cookie': this.cookies
